@@ -44,6 +44,7 @@ int main() {
 
 
 //better
+// in this time complexity depends upon the iterations but for worst cases i.e. whose gcd is 1 . its really worse. also running for n times
 #include <iostream>
 #include <algorithm>
 
@@ -72,6 +73,7 @@ int main() {
 
 
 //optimized
+// this guy is not running for n times
 #include<bits/stdc++.h>
 using namespace std;
 
