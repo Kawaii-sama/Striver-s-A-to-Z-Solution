@@ -79,6 +79,37 @@ int main() {
   } else {
     cout << "Not Palindrome";
   }
+
+
+
+
+
+
+    //string palindrome, recursion
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+bool isPalindrome (int i, string s, int right) {
+    if (i <= right) {
+        if (!isalnum(s[i])) i++;
+        else if ((!isalnum(s[right]))) right--;
+        else if (tolower(s[i])!=tolower(s[right])) return false;
+        else return isPalindrome (i+1,s,right-1);
+        
+    }
+        
+    return true;
+}
+
+
+int main() {
+    string s; 
+    getline(cin,s);
+    cout << isPalindrome (0, s, s.length()-1);
+  return 0;
+}
   return 0;
 }
 
