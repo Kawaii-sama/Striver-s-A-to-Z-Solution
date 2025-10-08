@@ -1,4 +1,4 @@
-// fibonacci series
+// fibonacci series, space optimized (without array)
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -24,13 +24,8 @@ int main() {
     return 0;
 }
 
-/*
-ek toh last wala change hoga , ek sum change hoga, begin same rahega;
-0 1 1 2 3 5
 
-
-begin = 0; last = 1; sum = begin + last;
-begin = last; last = sum; sum = begin + last;
+/* In case of some recursions, life fibonacci, O(2^n) time complexity is there as the recursion tree doubles at each level and follows a gp of 1,2,4,8 -> 2^n….. so the sum is 2^(n+1) - 1 which in big O interpretation becomes 2^n (constants are removed) and without memoization there is no overlapping or reuse. So each time fresh value is calculated. 
 */
 
 
