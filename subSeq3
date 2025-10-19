@@ -1,0 +1,28 @@
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+
+bool flag = false;
+void printS (int idx, vector<int> &ds,int s, int arr[] , int sum, int n) {
+    if (idx == n && flag == false) {
+        if (s == sum ) {
+            flag = true; 
+            for (auto it : ds) cout << it << " ";
+            cout << "\n";
+        }
+        return;
+    }
+    ds.push_back (arr[idx]);
+    s += arr[idx];
+    printS(idx+1,ds,s,arr,sum,n);
+    ds.pop_back();
+    s -= arr[idx];
+    printS (idx+1,ds,s,arr,sum,s);
+    }
+
+int main() {
+    int arr[] = {1,2,1}; vector<int> ds;
+    int sum = 2; int n = 3;
+    printS(0,ds,0,arr,sum,n);
+    return 0;
+}
