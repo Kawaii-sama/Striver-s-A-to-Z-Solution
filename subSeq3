@@ -1,8 +1,9 @@
-// Online C++ compiler to run C++ program online
+// prints sub sequence, given sum , prints one , global variable used
+
 #include <bits/stdc++.h>
 using namespace std;
 
-bool flag = false;
+bool flag = false; // global variable 
 void printS (int idx, vector<int> &ds,int s, int arr[] , int sum, int n) {
     if (idx == n && flag == false) {
         if (s == sum ) {
@@ -22,7 +23,8 @@ void printS (int idx, vector<int> &ds,int s, int arr[] , int sum, int n) {
 
 int main() {
     int arr[] = {1,2,1}; vector<int> ds;
-    int sum = 2; int n = 3;
+    int sum = 2; // given sum
+    int n = 3;
     printS(0,ds,0,arr,sum,n);
     return 0;
 }
