@@ -19,3 +19,32 @@ int main () {
     subSeq (0, ds, arr, n);
     return 0;
 }
+
+//my own method
+// print subsequence
+#include <bits/stdc++.h>
+using namespace std;
+
+void printS (int idx, int n, int arr[], vector <int> &ds) {
+    if (idx == n) {
+        for (auto it: ds)
+        cout << it << " ";
+        cout << "\n";
+        if (ds.size() == 0 )
+        cout << "{}";
+    return;
+    }
+    
+    ds.push_back(arr[idx]);
+    printS(idx+1,n,arr,ds);
+    ds.pop_back();
+    printS(idx+1,n,arr,ds);
+    return;
+}
+
+int main() {
+    int arr[] = {1,2,1}; int n = 3;
+    vector <int> ds;
+    printS(0,n,arr,ds);
+    return 0;
+}
