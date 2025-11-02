@@ -1,3 +1,5 @@
+// priting subsequences of a given sequence.
+//striver's method
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -20,8 +22,8 @@ int main () {
     return 0;
 }
 
-//my own method
-// print subsequence
+// my own method
+// print subsequence // i still dont understand the two blank lines in the output
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -29,7 +31,7 @@ void printS (int idx, int n, int arr[], vector <int> &ds) {
     if (idx == n) {
         for (auto it: ds)
         cout << it << " ";
-        cout << "\n";
+        cout << "\n"; // this was the only logical white space in my head i dont know what he did
         if (ds.size() == 0 )
         cout << "{}";
     return;
@@ -39,7 +41,7 @@ void printS (int idx, int n, int arr[], vector <int> &ds) {
     printS(idx+1,n,arr,ds);
     ds.pop_back();
     printS(idx+1,n,arr,ds);
-    return;
+    return; //added return statement because it should have been there.
 }
 
 int main() {
