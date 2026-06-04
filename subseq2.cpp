@@ -15,6 +15,10 @@ void printS (int idx, vector<int> &ds, int s, int sum, int arr[], int n) {
     s += arr[idx];
     printS(idx+1,ds,s,sum,arr,n);
     ds.pop_back();
+<<<<<<< HEAD
+=======
+    s -= arr[idx];
+>>>>>>> 34ca33c7e0839ae9227754bb3322e7208209c411
     printS(idx+1,ds,s,sum,arr,n);
     
 }
@@ -25,4 +29,8 @@ int main() {
     vector<int> ds;
     printS (0, ds, 0, sum, arr, n);
     return 0;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 34ca33c7e0839ae9227754bb3322e7208209c411

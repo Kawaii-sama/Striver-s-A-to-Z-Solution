@@ -41,9 +41,7 @@ int main () {
     printSum(n,0);
 }
 
-/*
-i really need to be grateful and pray for my protection
-*/
+
 
 
 
@@ -62,6 +60,3 @@ int main () {
     cout << printSum(n);
 }
 
-/*
-i really need to be grateful and pray for my protection
-*/
