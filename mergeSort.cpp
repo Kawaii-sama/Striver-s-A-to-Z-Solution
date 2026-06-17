@@ -1,5 +1,13 @@
 
-merge (int arr[], int l, int )
+merge (int arr[], int l, int mid, mid+1, int h) {
+    if ( left <= mid && right <= h) {
+    if (arr[left] < arr[right]) left++;
+    else right++; }
+
+    if (left < mid) { arr.push_back (arr[left]); left++;}
+    else  { arr.push_back (arr[right]); right++;}
+    
+}
 
 
 
