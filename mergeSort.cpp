@@ -1,4 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
 
+class Solution {
+
+
+public:
 void merge (vector <int> &arr, int low, int mid, int high) {
     vector <int> temp;
     int left = low, right = mid + 1;
@@ -27,11 +33,13 @@ void merge (vector <int> &arr, int low, int mid, int high) {
 void mergeSort (vector <int> &arr, int low, int high) {
     if (low >= high) return;
 
-    int mid = low + high / 2;
+    int mid = (low + high) / 2;
     mergeSort (arr, low, mid);
     mergeSort (arr, mid + 1, high);
     merge (arr, low, mid, high);
 }
+
+};
 
 
 
