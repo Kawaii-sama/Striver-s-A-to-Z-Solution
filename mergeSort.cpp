@@ -24,19 +24,14 @@ void merge (vector <int> &arr, int low, int mid, int high) {
 
 
 
+void mergeSort (vector <int> &arr, int low, int high) {
+    if (low >= high) return;
 
-mS (int arr[], int l, int h) {
-    if (l< h) {
-        int mid = (l + h) / 2;
-        mS (arr, l , mid);
-        mS (arr, m+1, h);
-        merge (arr, l, mid, mid+1, h);
-    }
+    int mid = low + high / 2;
+    mergeSort (arr, low, mid);
+    mergeSort (arr, mid + 1, high);
+    merge (arr, low, mid, high);
 }
-
-
-
-
 
 
 
