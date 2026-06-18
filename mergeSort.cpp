@@ -1,12 +1,25 @@
 
-merge (int arr[], int l, int mid, mid+1, int h) {
-    if ( left <= mid && right <= h) {
-    if (arr[left] < arr[right]) left++;
-    else right++; }
+void merge (vector <int> &arr, int low, int mid, int high) {
+    vector <int> temp;
+    int left = low, right = mid + 1;
+    while (left <= mid && right <= h) {
+    if (arr[left] <= arr[right]) {
+        temp.push_back (arr[left]); left++;
+    }
+    else
+        temp.push_back (arr[right]); right++;
+    }
 
-    if (left < mid) { arr.push_back (arr[left]); left++;}
-    else  { arr.push_back (arr[right]); right++;}
+    while (left <= mid) { 
+        temp.push_back (arr[left++]);}
+
     
+    while (right <= high) { 
+        temp.push_back (arr[right++]);}
+
+    for (int i = low; i <= high; i++) {
+        arr[i] = temp[i - low];
+    }
 }
 
 
