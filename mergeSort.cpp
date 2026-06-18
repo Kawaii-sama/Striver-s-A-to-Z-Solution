@@ -42,6 +42,17 @@ void mergeSort (vector <int> &arr, int low, int high) {
 };
 
 
+int main() {
+    vector <int> arr = {38, 27, 43, 3, 9, 82, 10};
+    Solution sol;
+    sol.mergeSort(arr, 0, arr.size() - 1);
+    for (int x : arr)
+        cout << x << " ";
+    cout << endl;
+    return 0;
+}
+
+
 
 
 
