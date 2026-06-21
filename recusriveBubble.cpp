@@ -6,16 +6,19 @@ class Solution {
 public:
     int Swap;
     vector<int> bubbleSort(vector<int>& nums) {
-        for (int i = 0; i < nums.size() - 1; i++) {
-            Swap = 0;
-            if (nums[i] > nums[i+1]) {
-                int temp = nums[i+1]; nums[i+1] = nums [i]; nums[i] = temp; Swap = 1;
-            }
+        for (int i = 0; i < nums.size() -1 ; i++) {
+            if (nums[i] > nums[i+1]) 
+                { swap(nums[i], nums[i+1]); Swap = 1; }
+            
+            else continue;
         }
         
-        if (Swap == 0) bubbleSort(nums);
+        if (Swap == 1) {
+        Swap = 0; 
+        return bubbleSort(nums); }
         
         return nums;
+        
 
     }
 };
@@ -24,11 +27,11 @@ public:
 int main() {
     // Write C++ code here
     Solution obj;
-    vector<int> nums = {3,2,1};
+    vector<int> nums = {5, 4, 4, 1, 1};
     vector<int> result = obj.bubbleSort(nums);
     
     for (int x : result) { 
-        cout << result[x] << " ";}
+        cout << x << " ";}
     
 
     return 0;
